@@ -1,0 +1,509 @@
+/****general styling****/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*body*/
+
+body {
+    margin: 0%;
+    opacity:1;
+    transition: 3s opacity; /*3s fade in*/
+    letter-spacing: 0.2vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1.5vw;
+    overflow-x:hidden;
+    user-select:none;
+}
+
+body.fade-out {
+    opacity: 0.1;
+}
+
+/*h1*/
+
+h1 {
+    text-transform: uppercase;
+    font-family:"Trebuchet MS", Optima;
+    text-align:center;
+    margin-top: 3%;
+    color:mediumslateblue;
+}
+
+h1:hover {
+    filter: grayscale(5%);
+    transform:scale(1.1);
+    transition: transform 1s;
+}
+
+/*portfolio title text*/
+
+.header {
+    color:azure;
+    padding-top: 10vh;
+}
+
+/*p*/
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:azure;
+    text-align:justify;
+    letter-spacing:1vw;
+    font-size:1vw;
+    padding-left:1vw;
+    padding-right:1vw;
+}
+
+p:hover {
+    transition: transform 1s;
+    transform:scale(1.01);
+}
+
+.center {
+    text-align:center;
+}
+
+.center:hover {
+    transition: transform 2s;
+    transform:scale(1.1);
+}
+
+/*a*/
+
+a {
+    color:blue;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+/*img*/
+
+img {
+    filter:sepia(70%);
+    max-width:100%;
+    height:340px;
+    display:block;
+    margin: auto auto auto auto;
+}
+
+img:hover {
+    filter:sepia(5%);
+    transition: transform 2s;
+    transform:scale(1.1);
+}
+
+/*footer*/
+
+.footer {
+    padding:1%;
+    background-color: mediumslateblue;
+}
+
+.footer p{
+    text-align: left;
+    font-size:1.75vw;
+    letter-spacing:0.25vw;
+}
+
+/****end general styling****/
+
+/****navbar styling****/
+
+.navbar {
+    overflow:hidden;
+    background-color:mediumslateblue;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:2;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+/* moveNav animation effect for moving nav bar in from the left of the screen */
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+/*navbar links*/
+
+.navbar a {
+    float:left;
+    display:block;
+    color:azure;
+    padding: 0.75vw 1vw;
+    text-decoration:none; /*navbar items will not be underlined or blue like normal links*/
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font: size 1.5vw;
+    text-align:center;
+    position:relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+}
+
+/*moveNavText animation effect for moving the navbar text from above the view to the navbar */
+
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+.navbar a:hover {
+    background-color:black;
+    color:mediumslateblue;
+    font-weight:bold;
+    cursor:pointer;
+    transition: 0.5s ease-in;
+}
+
+.navbar a.active {
+    background-color:rebeccapurple;
+}
+
+/****end navbar styling****/
+
+/****video styling****/
+
+.mariovid {
+    position:fixed;
+    right: 0;
+    bottom:0;
+    min-width:100%;
+    z-index:-1;
+}
+
+.vidtext {
+    background: rgba(0,0,0,0.5);
+    color:azure;
+    width:100%;
+    height:100vh;
+    padding-top:6vh;
+    position:relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+    z-index:1;
+}
+
+@keyframes moveVideoText {
+    from {top:-100vw;}
+    to {top:0vw;}
+}
+
+/****end video styling****/
+
+/****slideshow styling****/
+
+#slideshow_background {
+    background: rgba(255,255,255,0.35);
+}
+
+.mySlides {
+    display:none;
+}
+
+#slideshow_container {
+    width:39.5vw;
+    height:auto;
+    padding-top:4%;
+    position:relative;
+    margin:auto;
+}
+
+#slideshow_container a {
+    text-decoration:none;
+}
+
+.slideshow_images {
+    filter:grayscale(70%);
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0,0,0,0.75);
+    width:100%;
+}
+
+.prev, .next {
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    width:auto;
+    padding:2vw;
+    color:darkgray;
+    font-weight:bold;
+    font-size:1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select:none;
+    transition:0.6s ease;
+}
+
+.next {
+    right:0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color:rgba(0,0,0,0.8);
+    color:white;
+}
+
+.text {
+    color:white;
+    padding:1vw;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align:center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: 0.1vw;
+    font-size:1.5vw;
+    background-color:rgba(0,0,0,0.75);
+    font-weight:bold;
+}
+
+.dot {
+    cursor:pointer;
+    height:1vw;
+    width:1vw;
+    margin:.25vw;
+    background-color:mediumslateblue;
+    border-radius:50%;
+    display:inline-block;
+    transition: background-color 0.6s ease;
+    z-index:1;
+}
+
+.active, .dot:hover {
+    background-color:black;
+}
+
+.fade {
+    animation-name:fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name:fade;
+    -webkit-animation-duration:1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity:1;}
+}
+
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity:1;}
+}
+/****end slideshow****/
+
+/****table stlying****/
+
+* {
+    box-sizing:border-box;
+}
+
+.text_column {
+    float:left;
+    width:50%;
+    padding:1.6%;
+    height:550px;
+    background-color:lightpink;
+}
+
+.text_column p {
+    color:black;
+    font-size:1.70vw;
+    letter-spacing:normal;
+}
+
+.img_column {
+    float:left;
+    width:50%;
+    padding:1.6%;
+    padding-top:8%;
+    height:400px;
+    background-color:lightsteelblue;
+}
+
+.row:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/****end of table styling****/
+
+/****contact styling****/
+
+.pop_up_button {
+    position:fixed;
+    bottom:1.75vw;
+    right:1.75vw;
+    width:25vw;
+    background-color:rebeccapurple;
+    color:black;
+    border:solid black;
+    cursor:pointer;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+    z-index:3;
+}
+
+@keyframes movePopup {
+    from {right:-40vw;}
+    to {right:1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right:-40vw;}
+    to {right:1.75vw;}
+}
+
+.form_popup {
+    z-index:8;
+    display:none;
+    position:fixed;
+    bottom:0.5vw;
+    right:0.5vw;
+}
+
+.form_container {
+    max-width:49vw;
+    padding:1vw;
+    background-color:white;
+}
+
+.form_container input[type=text] {
+    width:100%;
+    padding:0.93vw;
+    border:none;
+    margin:0.6vw 0 0.6vw 0;
+    background:gainsboro;
+    font-size:1vw;
+}
+
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: 0.3vw;
+    font-size:1.5vw;
+    font-weight:bold;
+    padding:1.5vw;
+    cursor:pointer;
+    width:100%;
+    height:auto;
+}
+
+button:hover, .form_container .btn:hover {
+    color:white;
+    background-color:mediumslateblue;
+    transition-duration: 1s;
+    -webkit-transition-duration:1s;
+    border-color:silver;
+}
+
+.form_container .btn {
+    background-color:white;
+    color:black;
+    border-color:black;
+    margin-bottom: 1vh;
+}
+
+.form_container .cancel {
+    background-color:black;
+    color:white;
+    border-color:gray;
+}
+
+.form_container .cancel:hover {
+    color:white;
+    background-color:darkred;
+    transition-duration:1s;
+    -webkit-transition-duration:1s;
+    border-color:black;
+}
+/****end contact styling****/
+
+/****media query****/
+
+@media screen and (max-width: 527px) {
+    p {
+        font-size:3.75vw;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size:3.5vw;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size:2.75vw;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size:2.5vw;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size:2.25vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size:2vw;
+    }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size:1.75vw;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size:1.5vw;
+    }
+}
+
+@media screen and (min-width: 2270px)  {
+    p {
+        font-size:1.35vw;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .navbar a {
+        width: 20%;
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .header {
+        font-size: 4.5vw;
+    }
+}
+
+@media screen and (max-width:1725px) {
+    .text-column {
+        height:550px;
+    }
+    .img_column {
+        height:550px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    h1{
+        margin-top:0;
+    }
+}

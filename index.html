@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width"/>
+        <title>Maher's Portfolio</title>
+        <link rel= "shortcut icon" type="img/jpg" href="images/icons/icon3.png">
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+        <script src="portfolio.js" defer></script>
+    </head>
+
+    <body class="background">
+
+        <!--navbar-->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+        </div>
+        <!--end navbar-->
+
+        <!--background video-->
+        <div id="home">
+            <video autoplay muted loop class="mariovid">
+                <source src="./media/gaming.mp4" type="video/mp4">
+                <!--display msg incase video doesnt run-->
+                Your browser does not support HTML5
+            </video>
+        </div>
+        <!--end background video-->
+
+        <!--video text-->
+        <div class="vidtext">
+            <h1 class="header">Maher's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <!--maybe add a quote or something else up here-->
+                    My name is Maher Dakdouk. Welcome to my portfolio website. Here you can learn about my background, experiences, and goals. I appreciate your time and I hope you enjoy!
+                </p>
+            </strong>
+        </div>
+        <!--end video text-->
+
+        <!--slideshow-->
+        <div id="slideshow">
+            <div id="slideshow_background">
+                <div id="slideshow_container">
+                    <!--slide 1 of 3-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/icons/selfie.jpeg" alt="personal picture">
+                        <div class="text">I would love to assist you with your project!</div>
+                    </div>
+                    <!--slide 2 of 3-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/icons/htmlcssjs.png" alt="current skills">
+                        <div class="text">I'm currently trained in HTML, CSS, and Javascript.</div>
+                    </div>
+                    <!--slide 3 of 3(for now)-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/icons/coding.jpg" alt="contact picture">
+                        <div class="text"><a class="header contact" onclick="openForm()">Contact me!</a></div>
+                    </div>
+                    <!--prev/next buttons-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!--adding space between slideshow imgs and thumbnail controls-->
+
+                <!--thumbnail controls-->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <!--end slideshow-->
+
+        <!--about-->
+        <div class="row" id="about">
+            <!--left column-->
+            <div class="img_column">
+                <img src="./media/pokemon.jpg" alt="Pokemon game cartridges">
+            </div>
+            <!--end left column-->
+
+            <!--right column-->
+            <div class="text_column">
+                <h1>About</h1>
+                <p>
+                    I'm currently a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> and I'm working through their C# and .NET bootcamp. Once completed, I will continue my studies with them to learn how to program video games in Unity and Unreal Engine. My main goal is to become a video game developer! At this time, I'm trained in HTML, CSS, and JavaScript.
+                    <br>
+                    <br>
+                    Outside of coding and playing video games, I enjoy creating digital art and listening to music. I'm excited to try incorporating my own art in my future video game projects!
+                    <br>
+                    <br>
+                    Please feel free to <a href="#contact">contact</a> me regarding any projects or even mutual interests that we share. I'd love to connect!
+                </p>
+            </div>
+            <!--end right column-->
+        </div>
+        <!--end about-->
+
+        <!--github-->
+        <div class="row" id="github">
+            <!--left column-->
+            <div class="text_column">
+                <h1>GitHub</h1>
+                <p>
+                    My coding projects can all be found on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/madakdouk" target="_blank">Maher's GitHub</a></p>
+                    <p>I'm working hard to learn more languages and create more projects!</p>
+                </p>
+            </div>
+            <!--end left column-->
+            <!--right column-->
+            <div class="img_column">
+                <a href="https://github.com/madakdouk" target="blank"><img src="./media/github.png" alt="GitHub logo"></a>
+            </div>
+            <!--end right column-->
+        </div>
+        <!--end github-->
+
+        <!--contact-->
+        <div id="contact">
+            <button onclick="openForm()" class="pop_up_button">CONTACT</button>
+            <div class="form_popup" id="form">
+                <form action="https://formspree.io/f/xgedgroe" method="POST" class="form_container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Name" name="name" required>
+                    <label for="phone"><b>Phone number</b></label>
+                        <input type="text" placeholder="Phone number" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Email" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Message" name="message" required>
+                    
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+        <!--end contact-->
+
+        <!--footer-->
+        <div class="footer">
+            <p>Maher's portfolio | <a target="_blank" href="https://icons8.com/icon/IXDNZeYXiJcH/coding">Website icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        </div>
+        <!--end footer-->
+
+    </body>
+</html>
