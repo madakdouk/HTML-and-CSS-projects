@@ -5,7 +5,7 @@ This is where my HTML and CSS projects are kept.
 ## Projects
 
 - [Divas Archive](https://github.com/madakdouk/HTML-and-CSS-projects/blob/main/divas_archive.html)
-- [Movie Theater site](https://github.com/madakdouk/Tech-Academy-Projects/tree/main/HTML%20and%20CSS%20projects/bootstrap4_project)
+- [Movie Theater site](https://github.com/madakdouk/HTML-and-CSS-projects/tree/main/bootstrap4_project)
 - [Portfolio website](https://madakdouk.github.io)
 
 ### Divas Archive
